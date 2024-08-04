@@ -2,55 +2,47 @@ body {
     font-family: 'Ubuntu Mono', monospace;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: url('mifi');
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
+header, nav, section, footer {
+    background-color: #000000;
+    color: #ffffff;
     text-align: center;
+    padding: 1em 0;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-    background-color: #333;
+p {
+    margin: 0px 400px;
+    text-align: left;
+    font-size: 1.4em;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+header h1 {
+    margin: 0;
 }
 
-nav ul li a {
-    color: white;
+nav a {
     text-decoration: none;
-    padding: 14px 20px;
-    display: inline-block;
-}
-
-nav ul li a:hover {
-    background-color: #111;
+    color: #ffffff;
+    margin: 0 1em;
+    font-size: 1.6em;
 }
 
 section {
-    padding: 20px;
+    padding: 2em;
     text-align: center;
-}
-
-section img {
-    border-radius: 50%;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    width: 100%;
+    position: fixed;
     bottom: 0;
+    width: 100%;
+}
+
+marquee {
+    color: #ffffff;
 }
