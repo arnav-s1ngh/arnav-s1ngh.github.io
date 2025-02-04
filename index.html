@@ -3,36 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arnav's Website</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap">
+    <title>Arnav Singh - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Ubuntu Mono', monospace;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ddd;
+        }
+        section {
+            flex: 1;
+            padding: 3rem 2rem;
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+        h1, h2, h3 {
+            color: #222;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            line-height: 1.6;
+        }
+        section a img {
+            margin-top: 1rem;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        section a img:hover {
+            transform: scale(1.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        .experience-item {
+            margin-bottom: 1.5rem;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1> </h1>
+        <h1>Arnav Singh</h1>
+        <p>Fourth-year Computer Science undergraduate at IIIT Delhi, exploring diverse fields beyond the curriculum.</p>
     </header>
+
     <nav>
-        <a href="https://arnav-s1ngh.github.io/">home</a>
-        <a href="https://www.linkedin.com/in/arnvsin/">cv</a>
-        <a href="mailto:mail.arnavsingh.100@gmail.com">mail</a>
-        <a href="https://www.youtube.com/watch?v=H8WMmcYF0Cg">misc</a>
+        <a href="https://arnav-s1ngh.github.io/">Home</a>
+        <a href="https://www.linkedin.com/in/arnvsin/">LinkedIn</a>
+        <a href="mailto:mail.arnavsingh.100@gmail.com">Email</a>
+        <a href="https://github.com/arnav-s1ngh">GitHub</a>
     </nav>
-<section>
-    <h5> NOTE: THIS SITE IS UNDER RENOVATION SINCE THE OWNER CAN'T FIND A DECENT IMAGE TO GO ALONG WITH THIS "DESIGN" </h5>
-    <br> <br> <br>
-    <h3>about</h3>
-    <h4>hello! i am arnav singh, a fourth-year undergraduate at iiit delhi, <br> pursuing a degree in computer science, and studying anything but.</h4>
-    <h3>previous experience:</h3>
-    <ul style="list-style-type:none; padding: 0;">
-        <li><b>summer intern, indian oil corporation limited (may 2024 - july 2024)</b></li>
-        <li><b>software developer, cloudlabs portal, algorithms to architecture lab, iiit delhi (jan 2024 - may 2024)</b></li>
-        <li><b>undergraduate researcher, dept. of ssh, iiit delhi (july 2023 - dec 2023)</b></li>
-    </ul>
-    <br>
-    <a href="https://github.com/arnav-s1ngh"><img src="ghub.jpg" height="100" width="100" alt="github profile"></a>
-</section>
+
+    <section>
+        <h2>About Me</h2>
+        <p>I am passionate about software development, machine learning, and data analysis. My experience spans across academic research, internships at renowned organizations, and various collaborative projects that solve real-world problems.</p>
+
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <h3>Summer Intern, Indian Oil Corporation Limited (May 2024 - July 2024)</h3>
+            <p>As an intern in the Strategic Information Systems department, specifically within the High Impact Analytics team, my responsibilities involved utilizing Business Intelligence tools, including Qlik Sense, to create dashboards, develop comprehensive reports, and support decision-making processes related to Project i-DRIVE in coordination with consultants from PricewaterhouseCoopers.</p>
+        </div>
+        <div class="experience-item">
+            <h3>Software Developer, CloudLabs IIIT Delhi (Jan 2024 - May 2024)</h3>
+            <p>The CloudLabs project, developed by the Algorithms to Architecture Lab at IIIT-Delhi, is a Ministry of Science and Technology-funded IoT solution designed to provide remote hardware access, enabling students and researchers to use electronic lab equipment from the comfort of their homes. My duties involved identifying and troubleshooting problems, optimizing the user interface for a seamless experience, and enhancing the performance and reliability of API interactions.</p>
+        </div>
+        <div class="experience-item">
+            <h3>Undergraduate Researcher, Department of SSH, IIIT Delhi (July 2023 - Dec 2023)</h3>
+            <p>Worked under Prof. Manohar Kumar to understand the conversion of online communities into pressure groups and the role of online platforms in influencing the same, with a focus on vigilante groups.</p>
+        </div>
+
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Classifying Dialogue to Characters in TV Shows:</strong> 🎭 <a href="https://github.com/arnav-s1ngh/CSE542-SML">GitHub Repository</a> Developed an NLP pipeline for dialogue classification using machine learning techniques.</li>
+            <li><strong>Arduino-based Line Following Robot:</strong> 🤖 <a href="https://github.com/arnav-s1ngh/Introduction-to-Robotics">GitHub Repository</a> Built and simulated advanced controllers for a line-following robot using ROS, Gazebo, and Arduino.</li>
+            <li><strong>Performance Analysis of Congestion Control Algorithms:</strong> 📊 <a href="https://github.com/arnav-s1ngh/wn-proj-24">GitHub Repository</a> Simulated and analyzed congestion control algorithms for diverse traffic scenarios using ns-3.</li>
+        </ul>
+
+        <h2>Test Scores</h2>
+        <ul>
+            <li>GRE: Scored 327/340 (Q-170, V-157)</li>
+            <li>IELTS: Achieved an 8 Band</li>
+            <li>JEE Advanced: Ranked 7812 among ~100,000 students</li>
+            <li>JEE Main: Ranked 7011 among a million students</li>
+            <li>ICAR AIEEA-UG: Ranked 3rd among ~100,000 students</li>
+            <li>BITSAT: Scored 318/450</li>
+        </ul>
+
+        
+        <a href="https://github.com/arnav-s1ngh">
+            <img src="ghub.jpg" height="100" width="100" alt="GitHub Profile">
+        </a>
+    </section>
+
     <footer>
-        <marquee><h3>&copy; 2024 Arnav Singh. All rights reserved.</h3></marquee>
+        <p>&copy; 2024 Arnav Singh. All rights reserved.</p>
     </footer>
 </body>
 </html>
+
