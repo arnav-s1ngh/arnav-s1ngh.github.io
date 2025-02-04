@@ -4,133 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arnav Singh - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
+        :root {
+            --primary-color: #111;
+            --secondary-color: #fff;
+            --accent-color: #007bff;
+            --bg-color: #f9f9f9;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
-            font-family: 'Ubuntu Mono', monospace;
-            background-color: #f9f9f9;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            transition: background 0.3s, color 0.3s;
         }
         header {
-            background-color: #333;
-            color: white;
+            background: var(--primary-color);
+            color: var(--secondary-color);
             text-align: center;
-            padding: 2rem 0;
+            padding: 3rem 0;
+            font-size: 1.2rem;
         }
         nav {
-            background-color: #444;
-            text-align: center;
-            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            background: var(--primary-color);
+            padding: 1rem;
         }
         nav a {
-            color: white;
+            color: var(--secondary-color);
             text-decoration: none;
-            margin: 0 1.5rem;
-            font-size: 1.2rem;
+            font-weight: 600;
             transition: color 0.3s;
         }
         nav a:hover {
-            color: #ddd;
+            color: var(--accent-color);
         }
-        section {
-            flex: 1;
-            padding: 3rem 2rem;
-            max-width: 800px;
-            margin: auto;
-            text-align: left;
+        .container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: var(--secondary-color);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
-        h1, h2, h3 {
-            color: #222;
+        h1, h2 {
+            color: var(--primary-color);
         }
-        ul {
-            list-style: none;
-            padding: 0;
-            line-height: 1.6;
-        }
-        section a img {
-            margin-top: 1rem;
-            border-radius: 50%;
-            transition: transform 0.3s;
-        }
-        section a img:hover {
-            transform: scale(1.1);
+        .experience-item, .project-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-left: 4px solid var(--accent-color);
+            background: rgba(0, 123, 255, 0.1);
+            border-radius: 5px;
         }
         footer {
-            background-color: #333;
-            color: white;
+            background: var(--primary-color);
+            color: var(--secondary-color);
             text-align: center;
-            padding: 1.5rem 0;
+            padding: 2rem 0;
+            margin-top: 3rem;
         }
-        .experience-item {
-            margin-bottom: 1.5rem;
+        .dark-mode {
+            --primary-color: #fff;
+            --secondary-color: #111;
+            --bg-color: #222;
+        }
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+    
     <header>
         <h1>Arnav Singh</h1>
-        <p>Fourth-year Computer Science undergraduate at IIIT Delhi, exploring diverse fields beyond the curriculum.</p>
+        <p>Computer Science Undergraduate at IIIT Delhi</p>
     </header>
-
+    
     <nav>
-        <a href="https://arnav-s1ngh.github.io/">Home</a>
-        <a href="https://www.linkedin.com/in/arnvsin/">LinkedIn</a>
-        <a href="mailto:mail.arnavsingh.100@gmail.com">Email</a>
-        <a href="https://github.com/arnav-s1ngh">GitHub</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <section>
-        <h2>About Me</h2>
-        <p>I am passionate about software development, machine learning, and data analysis. My experience spans across academic research, internships at renowned organizations, and various collaborative projects that solve real-world problems.</p>
-
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <h3>Summer Intern, Indian Oil Corporation Limited (May 2024 - July 2024)</h3>
-            <p>As an intern in the Strategic Information Systems department, specifically within the High Impact Analytics team, my responsibilities involved utilizing Business Intelligence tools, including Qlik Sense, to create dashboards, develop comprehensive reports, and support decision-making processes related to Project i-DRIVE in coordination with consultants from PricewaterhouseCoopers.</p>
-        </div>
-        <div class="experience-item">
-            <h3>Software Developer, CloudLabs IIIT Delhi (Jan 2024 - May 2024)</h3>
-            <p>The CloudLabs project, developed by the Algorithms to Architecture Lab at IIIT-Delhi, is a Ministry of Science and Technology-funded IoT solution designed to provide remote hardware access, enabling students and researchers to use electronic lab equipment from the comfort of their homes. My duties involved identifying and troubleshooting problems, optimizing the user interface for a seamless experience, and enhancing the performance and reliability of API interactions.</p>
-        </div>
-        <div class="experience-item">
-            <h3>Undergraduate Researcher, Department of SSH, IIIT Delhi (July 2023 - Dec 2023)</h3>
-            <p>Worked under Prof. Manohar Kumar to understand the conversion of online communities into pressure groups and the role of online platforms in influencing the same, with a focus on vigilante groups.</p>
-        </div>
-
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Classifying Dialogue to Characters in TV Shows:</strong> 🎭 <a href="https://github.com/arnav-s1ngh/CSE542-SML">GitHub Repository</a> Developed an NLP pipeline for dialogue classification using machine learning techniques.</li>
-            <li><strong>Arduino-based Line Following Robot:</strong> 🤖 <a href="https://github.com/arnav-s1ngh/Introduction-to-Robotics">GitHub Repository</a> Built and simulated advanced controllers for a line-following robot using ROS, Gazebo, and Arduino.</li>
-            <li><strong>Performance Analysis of Congestion Control Algorithms:</strong> 📊 <a href="https://github.com/arnav-s1ngh/wn-proj-24">GitHub Repository</a> Simulated and analyzed congestion control algorithms for diverse traffic scenarios using ns-3.</li>
-        </ul>
-
-        <h2>Test Scores</h2>
-        <ul>
-            <li>GRE: Scored 327/340 (Q-170, V-157)</li>
-            <li>IELTS: Achieved an 8 Band</li>
-            <li>JEE Advanced: Ranked 7812 among ~100,000 students</li>
-            <li>JEE Main: Ranked 7011 among a million students</li>
-            <li>ICAR AIEEA-UG: Ranked 3rd among ~100,000 students</li>
-            <li>BITSAT: Scored 318/450</li>
-        </ul>
-
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Passionate about software development, machine learning, and data analysis. I love solving real-world problems through technology.</p>
+        </section>
         
-        <a href="https://github.com/arnav-s1ngh">
-            <img src="ghub.jpg" height="100" width="100" alt="GitHub Profile">
-        </a>
-    </section>
-
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Summer Intern, IOCL (May 2024 - July 2024)</h3>
+                <p>Worked on Business Intelligence dashboards using Qlik Sense, supporting data-driven decisions for Project i-DRIVE.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Software Developer, CloudLabs IIIT Delhi</h3>
+                <p>Developed an IoT solution providing remote lab access, optimizing API interactions and UI performance.</p>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <strong>TV Dialogue Classification:</strong> 🎭 <a href="https://github.com/arnav-s1ngh/CSE542-SML">GitHub</a>
+                <p>Built an NLP pipeline for classifying TV show dialogues using ML techniques.</p>
+            </div>
+            <div class="project-item">
+                <strong>Line Following Robot:</strong> 🤖 <a href="https://github.com/arnav-s1ngh/Introduction-to-Robotics">GitHub</a>
+                <p>Developed and simulated advanced controllers for a robot using ROS, Gazebo, and Arduino.</p>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>📧 <a href="mailto:mail.arnavsingh.100@gmail.com">Email Me</a></p>
+            <p>🔗 <a href="https://www.linkedin.com/in/arnvsin/">LinkedIn</a></p>
+            <p>🐙 <a href="https://github.com/arnav-s1ngh">GitHub</a></p>
+        </section>
+    </div>
+    
     <footer>
-        <p>&copy; 2024 Arnav Singh. All rights reserved.</p>
+        <p>&copy; 2025 Arnav Singh | All Rights Reserved</p>
     </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
 
